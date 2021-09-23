@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 
 # load libs from utils
@@ -15,13 +14,13 @@ def app():
     st.markdown("Sculpt your dream body with NutriSmart. NutriSmart is an AI-based calorie and macro counter app enabling effortless tracking of your nurition by simply TALKING into your microphone. \
 You'll get a budget- and diet-specific food suggestions making it affordable and easy to reach your goal. No more typing in or searching food names !\
 The focus is on your goals and health in an effortless and easiest way possible ! Enjoy")
-    c1, c2 = st.beta_columns([0.5,1])
+    c1, c2 = st.columns([0.5,1]) 
     with c1:
         st.markdown("<h1 style='text-align: center; font-size:1.75em ; color: green;'>Fitness Goals</h1>", unsafe_allow_html=True)
         # TODO write a function for taking in the user's
         # input and save it into a named tuple for macros
         # e.g. macro.cal, macro.protein, ..
-        cal = float(st.text_input("Calories (cal):",value="2000"))
+        cal = float(st.text_input("Calories (cal):",value="4000"))
 
         # TODO: restirct user entring ratios > 100% 
         rprt = float(st.text_input("Protein (%):", value="40"))
@@ -48,9 +47,9 @@ The focus is on your goals and health in an effortless and easiest way possible 
         
         # TODO: if time of the day is not present in the 
         # recognized text remove it's correspoding expander
-        bf = st.beta_expander(label='Breakfast')
-        lch = st.beta_expander(label='Lunch')
-        din = st.beta_expander(label='Dinner')
+        bf = st.expander(label='Breakfast') 
+        lch = st.expander(label='Lunch') 
+        din = st.expander(label='Dinner') 
 
         for i,item in enumerate(food_macros):
             timestamp = item['consumed_at']
