@@ -13,8 +13,8 @@ def recog_audio():
         
         # let user choose whether to say something again 
         except sr.UnknownValueError:
+            # TODO: when this error happend redirect the user to speak in microphone again
             print("Google SR engine could not understand the audio. Say again please ...")
             #recog_audio()
-
         except sr.RequestError as e:
             print("Web request error")
