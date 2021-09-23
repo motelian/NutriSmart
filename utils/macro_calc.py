@@ -1,5 +1,3 @@
-from collections import namedtuple
-
 #every 1gr protein equals to 4 calories
 #every 1gr carb equals to 4 calories
 #every 1gr fat equals to 8 calories
