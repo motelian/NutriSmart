@@ -1,17 +1,24 @@
 import json 
 import os
 import requests
+from dotenv import load_dotenv, find_dotenv
 from dateutil.parser import parse
 
 def creds():
     '''Nutritionix API credentials '''
-    directory = '/Users/Mohammad/Research/TDI_DataScience_Program/NutriSmart'
-    filename = 'nutritionix_creds.json.nogit'
-    filepath = os.path.join(directory, filename)
 
-    # access the credentials for nutritionix API
-    with open(filepath) as fh:
-        secrets = json.loads(fh.read())
+    load_dotenv(find_dotenv())
+    # directory = '/Users/Mohammad/Research/TDI_DataScience_Program/NutriSmart'
+    # filename = 'nutritionix_creds.json.nogit'
+    # filepath = os.path.join(directory, filename)
+
+    # # access the credentials for nutritionix API
+    # with open(filepath) as fh:
+    #     secrets = json.loads(fh.read())
+    secrets = dict()
+    secrets['username'] = os.environ.get("user_name")
+    secrets['app_id'] = os.environ.get("app_id")
+    secrets['app_key'] = os.environ.get("app_key")
     return secrets
 
 # process the recognized food text into json
