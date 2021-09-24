@@ -43,6 +43,7 @@ The focus is on your goals and health in an effortless and easiest way possible 
                 
         # use the Nutritionix API to extract food items and serving sizes
         nx_api = ns.creds()  
+        print("hello", nx_api)
         food_list = ns.analyze(recog_text, nx_api)
         food_macros = ns.extract_macros(food_list['foods'])
         
