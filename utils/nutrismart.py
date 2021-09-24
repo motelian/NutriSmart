@@ -22,6 +22,8 @@ def analyze(text, nx_api):
     app_id = nx_api['app_id']
     app_key = nx_api['app_key']
 
+    print(username, app_id, app_key)
+
     url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
     headers = {
         'accept': 'application/json',
