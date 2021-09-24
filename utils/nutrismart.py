@@ -25,10 +25,10 @@ def analyze(text, nx_api):
     url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
     headers = {
         'accept': 'application/json',
-        'x-app-id': app_id,#'2394a54f'
-        'x-app-key': app_key, #'4f22079aa9dee4d610a5afa1c6d286f3'
-        'x-remote-user-id': username, #'motevas2'
-        'Content-Type': 'application/json',
+        'x-app-id': app_id,
+        'x-app-key': app_key, 
+        'x-remote-user-id': username,
+        'Content-Type': 'application/json'
     }
 
     data = {"query": text, "timezone":"US/Eastern"}
@@ -44,12 +44,6 @@ def analyze(text, nx_api):
         print ("Timeout Error:",errt)
     except requests.exceptions.RequestException as err:
         print ("OOps: Something Else",err)
-    
-    test = r.json()
-    print(username, app_id, app_key)
-    print(headers)
-    #print(test['id'],test['message'])
-
     return r.json()['foods']
 
 # process the macros from food items
