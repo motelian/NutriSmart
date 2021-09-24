@@ -7,6 +7,7 @@ from dateutil.parser import parse
 def creds():
     '''Nutritionix API credentials '''
     check = load_dotenv(find_dotenv())
+    print(os.environ.get("user_name"))
     secrets = dict()
     secrets['user_name'] = os.environ.get("user_name")
     secrets['app_id'] = os.environ.get("app_id")
