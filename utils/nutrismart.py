@@ -25,9 +25,9 @@ def analyze(text, nx_api):
     url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
     headers = {
         'accept': 'application/json',
-        'x-app-id': '2394a54f', #app_id,
-        'x-app-key': '4f22079aa9dee4d610a5afa1c6d286f3', #app_key,
-        'x-remote-user-id': 'motevas2',#username,
+        'x-app-id': app_id,#'2394a54f', #app_id,
+        'x-app-key': app_key, #'4f22079aa9dee4d610a5afa1c6d286f3', #app_key,
+        'x-remote-user-id': username, #'motevas2',#username,
         'Content-Type': 'application/json',
     }
 
@@ -47,6 +47,7 @@ def analyze(text, nx_api):
     
     test = r.json()
     print(username, app_id, app_key)
+    print(headers)
     #print(test['id'],test['message'])
 
     return r.json()['foods']
