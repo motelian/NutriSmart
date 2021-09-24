@@ -6,13 +6,12 @@ from dateutil.parser import parse
 
 def creds():
     '''Nutritionix API credentials '''
-    check = load_dotenv(find_dotenv())
-    print(os.environ.get("USER_NAME"))
+    load_dotenv(find_dotenv())
     secrets = dict()
     secrets['user_name'] = os.environ.get("USER_NAME")
     secrets['app_id'] = os.environ.get("APP_ID")
     secrets['app_key'] = os.environ.get("APP_KEY")
-    return secrets, check
+    return secrets
 
 # process the recognized food text into json
 def analyze(text, nx_api):
@@ -22,8 +21,6 @@ def analyze(text, nx_api):
     username = nx_api['user_name']
     app_id = nx_api['app_id']
     app_key = nx_api['app_key']
-
-    print(username, app_id, app_key)
 
     url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
     headers = {
@@ -49,9 +46,10 @@ def analyze(text, nx_api):
         print ("OOps: Something Else",err)
     
     test = r.json()
-    print(test.keys())
+    print(username, app_id, app_key)
+    print(test['id'],test['message'])
 
-    return r.json() #r.json()['foods']
+    return r.json()['foods']
 
 # process the macros from food items
 def extract_macros(foodlist):
