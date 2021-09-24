@@ -45,7 +45,10 @@ def analyze(text, nx_api):
     except requests.exceptions.RequestException as err:
         print ("OOps: Something Else",err)
     
-    return r.json()['foods']
+    test = r.json()
+    print(test.keys())
+
+    return r.json() #r.json()['foods']
 
 # process the macros from food items
 def extract_macros(foodlist):
