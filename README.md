@@ -1,12 +1,11 @@
 # NutriSmart
 
-NutriSmart is an AI-based calorie and macro tracking app. It's ultimate mission is to provide an effortless nutrition tracking mechanism that is both budget- and diet-specific. It adopts the Natural Language Processing tool from the [Nutritionix][https://www.nutritionix.com/] to process and extract food items and their quantities from the user's daily food log. The daily food log can either be provided in a text box in the app or by simply talking to the app. Equipped with the speech recognition technology, NutriSmart makes tracking the macros simple and effortless. 
+NutriSmart is an AI-based calorie and macro tracking app. It's ultimate mission is to provide an effortless nutrition tracking mechanism that is both budget- and diet-specific. It adopts the Natural Language Processing tool from the [Nutritionix](https://www.nutritionix.com/) to process and extract food items and their quantities from the user's daily food log. The daily food log can either be provided in a text box in the app or by simply talking to the app. Equipped with the speech recognition technology, NutriSmart makes tracking the macros simple and effortless. 
 
 Check out the live app: https://nutrismartapp.herokuapp.com/ <br />
 **_(Bad News: The app is deployed on Heroku and if you want the speech recognition feature you have install pyaudio on Heroku and good luck with that ;))_**
-**_(Good News: The app is fully functional and you can enjoy the spech recognition feature if you install the packages locally including pyaudio)_**
 
-![Image of Landing Page](images/2016-03-20_15-26-07_1.png)
+**_(Good News: The app is fully functional and you can enjoy the spech recognition feature if you install the packages locally including pyaudio)_**
 
 ## Inspiration
 Everyone wants to live a happy life and fitness is one the ways to achieve that
