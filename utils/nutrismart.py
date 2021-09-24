@@ -7,11 +7,11 @@ from dateutil.parser import parse
 def creds():
     '''Nutritionix API credentials '''
     check = load_dotenv(find_dotenv())
-    print(os.environ.get("user_name"))
+    print(os.environ.get("USER_NAME"))
     secrets = dict()
-    secrets['user_name'] = os.environ.get("user_name")
-    secrets['app_id'] = os.environ.get("app_id")
-    secrets['app_key'] = os.environ.get("app_key")
+    secrets['user_name'] = os.environ.get("USER_NAME")
+    secrets['app_id'] = os.environ.get("APP_ID")
+    secrets['app_key'] = os.environ.get("APP_KEY")
     return secrets, check
 
 # process the recognized food text into json
