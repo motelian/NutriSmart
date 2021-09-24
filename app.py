@@ -43,10 +43,9 @@ The focus is on your goals and health in an effortless and easiest way possible 
             # st.write("Recognized Text:\n"+recog_text)
                 
         # use the Nutritionix API to extract food items and serving sizes
-        nx_api, check = ns.creds()  
-        print("hello", check)
+        nx_api = ns.creds()  
         food_list = ns.analyze(recog_text, nx_api)
-        food_macros = ns.extract_macros(food_list['foods'])
+        food_macros = ns.extract_macros(food_list)
         
         # TODO: if time of the day is not present in the 
         # recognized text remove it's correspoding expander
