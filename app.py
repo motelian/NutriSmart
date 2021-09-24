@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # load libs from utils
-from utils.speech_recog import recog_audio 
+#from utils.speech_recog import recog_audio 
 import utils.plot as plot
 from utils.macro_calc import convert, agg_macro
 import utils.nutrismart as ns
@@ -36,9 +36,10 @@ The focus is on your goals and health in an effortless and easiest way possible 
         if audio_on =='off':
             recog_text = st.text_area("Please enter your daily food items", height = 2, value="e.g. for breakfast, I had two eggs and 1 avocado for lunch I had a 12 oz Ribeye steak with 2 medium potatoes and for dinner I had 1/2 cup of rice and 200 gr of chicken breasts")
         else:
-            st.code("Please allow Google 5 seconds to recognize your voice.")
-            recog_text = recog_audio()
-            st.write("Recognized Text:\n"+recog_text)
+            pass
+            # st.code("Please allow Google 5 seconds to recognize your voice.")
+            # recog_text = recog_audio()
+            # st.write("Recognized Text:\n"+recog_text)
                 
         # use the Nutritionix API to extract food items and serving sizes
         nx_api = ns.creds()  
