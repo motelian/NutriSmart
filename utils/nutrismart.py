@@ -6,12 +6,12 @@ from dateutil.parser import parse
 
 def creds():
     '''Nutritionix API credentials '''
-    load_dotenv(find_dotenv())
+    check = load_dotenv(find_dotenv())
     secrets = dict()
     secrets['user_name'] = os.environ.get("user_name")
     secrets['app_id'] = os.environ.get("app_id")
     secrets['app_key'] = os.environ.get("app_key")
-    return secrets
+    return secrets, check
 
 # process the recognized food text into json
 def analyze(text, nx_api):

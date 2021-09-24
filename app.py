@@ -1,3 +1,4 @@
+from requests import check_compatibility
 import streamlit as st
 import pandas as pd
 
@@ -42,8 +43,8 @@ The focus is on your goals and health in an effortless and easiest way possible 
             # st.write("Recognized Text:\n"+recog_text)
                 
         # use the Nutritionix API to extract food items and serving sizes
-        nx_api = ns.creds()  
-        print("hello", nx_api)
+        nx_api, check = ns.creds()  
+        print("hello", check)
         food_list = ns.analyze(recog_text, nx_api)
         food_macros = ns.extract_macros(food_list['foods'])
         
