@@ -16,6 +16,10 @@ In addition to a solid vision, a good bussiness perspective and a potential to g
 
 ![Image of Landing Page](images/Fitness_App_Market_Growth.png)
 
+## Competetive Space
+In the broad competitive space of nutrition apps NutriSmart focuses on personalization and affordability as its key differentiators which make it to stand out among these giant in the fitness industry.
+
+![Image of Landing Page](images/competitive_space.png)
 
 ## The Database and Natural Language Processing Engine
 To extract the food items, their quantities, and their corresponding macros (e.g. Calories, Protien, Carbs, and Fat), Nutritionix provides a robust platform that is designed to analyze and turn food-related written/spoken text into nutrition analysis using their own NLP engine. For NutriSmart to work on your local machine, you need to obtain API keys (usrname, app_id, and app_password) from Nutritionix which allows you to ping their server for food information 200 hits/day and it is free! 
